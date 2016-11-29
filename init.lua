@@ -23,7 +23,7 @@ tmr.alarm(0,1000,0,function()
 
         uart.on("data", function( data)
         local Str1 = data
-      
+
             if(string.sub(Str1,0,9) == "heartbeat") then
 
             else
@@ -33,7 +33,7 @@ tmr.alarm(0,1000,0,function()
 
         conn:on("receive",function(conn,payload)
         local Str = payload
-  
+
         if(string.sub(Str,0,9) == "heartbeat") then
 
         else
