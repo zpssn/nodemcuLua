@@ -2,7 +2,7 @@ wifi.setmode(wifi.STATION)
 wifi.sta.config('kiss-wrt', '56781234')
 wifi.sta.connect()
 local HOST = "192.168.0.109"
-tmr.alarm(1,1000,1,function() 
+tmr.alarm(1,5000,1,function() 
   srv = net.createConnection(net.TCP, 0)
   srv:connect(6969,HOST)
   end)
